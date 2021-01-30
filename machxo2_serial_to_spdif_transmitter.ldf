@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="machxo2_serial_to_spdif_transmitter" device="LCMXO2-1200HC-5SG32C" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="machxo2_serial_to_spdif_transmitter_top"/>
+        <Source name="src/dual_clock_buffer/dual_clock_buffer.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/serial_audio_decoder/serial_audio_decoder.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/spdif_frame_encoder/spdif_bmc_encoder.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/spdif_frame_encoder/spdif_frame_encoder.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/spdif_frame_encoder/spdif_sub_frame_encoder.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/machxo2_serial_to_spdif_transmitter_top.v" type="Verilog" type_short="Verilog">
+            <Options top_module="machxo2_serial_to_spdif_transmitter_top"/>
+        </Source>
+        <Source name="src/serial_to_spdif_transmitter.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="machxo2_serial_to_spdif_transmitter.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="machxo2_serial_to_spdif_transmitter1.sty"/>
+</BaliProject>

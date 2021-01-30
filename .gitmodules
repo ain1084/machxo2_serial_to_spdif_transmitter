@@ -1,0 +1,9 @@
+[submodule "src/spdif_frame_encoder"]
+	path = src/spdif_frame_encoder
+	url = https://github.com/ain1084/spdif_frame_encoder.git
+[submodule "src/serial_audio_decoder"]
+	path = src/serial_audio_decoder
+	url = https://github.com/ain1084/serial_audio_decoder.git
+[submodule "src/dual_clock_buffer"]
+	path = src/dual_clock_buffer
+	url = https://github.com/ain1084/dual_clock_buffer.git
