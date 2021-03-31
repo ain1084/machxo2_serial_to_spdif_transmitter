@@ -1,3 +1,5 @@
+`default_nettype none
+
 module machxo2_serial_to_spdif_transmitter_top(
     input wire nreset,
     input wire clk256,		/* x256 fs */
