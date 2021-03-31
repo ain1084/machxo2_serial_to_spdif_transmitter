@@ -1,3 +1,5 @@
+`default_nettype none
+
 module serial_to_spdif_transmitter(
     input wire reset,           // reset
     input wire clk128,          // master clock (x128 fs)
@@ -17,6 +19,7 @@ module serial_to_spdif_transmitter(
 	wire is_decoder_left;
     wire [31:0] decoder_audio;
     wire [23:0] buffer_audio;
+	wire is_error;
 
     dual_clock_buffer #(.width(25)) buffer_ (
         .reset(reset),
@@ -36,7 +39,7 @@ module serial_to_spdif_transmitter(
         .lrclk(lrclk),
         .sdin(sdin),
         .is_i2s(is_i2s),
-		.is_error(),
+		.is_error(is_error),
         .lrclk_polarity(lrclk_polarity),
         .o_valid(decoder_to_buffer_valid),
         .o_ready(buffer_to_decoder_ready),
@@ -45,7 +48,7 @@ module serial_to_spdif_transmitter(
                     
     spdif_frame_encoder encoder_(
         .clk128(clk128),
-        .reset(reset),
+        .reset(reset | is_error),
         .sub_frame_number(sub_frame_number),
         .i_valid(buffer_to_encoder_valid),
         .i_ready(encoder_to_buffer_ready),
